@@ -1,4 +1,4 @@
-import request from "@/utils/http"
+import request from '@/utils/http'
 
 /**
  * @description 登陆
@@ -6,19 +6,18 @@ import request from "@/utils/http"
  */
 export const login = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/access/login',
+    url: '/admin/access/login',
     method: 'POST',
     data
   })
 }
 export const logout = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/access/logout',
+    url: '/admin/access/logout',
     method: 'POST',
     data
   })
 }
-
 
 /**
  * @description 获取站长信息
@@ -26,11 +25,10 @@ export const logout = (data: any): Promise<any> => {
  */
 export const getWebmasterInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/getWebmasterInfo',
-    method: 'POST',
+    url: '/admin/site/getWebmasterInfo',
+    method: 'POST'
   })
 }
-
 
 /**
  * @description 修改站长信息
@@ -38,7 +36,7 @@ export const getWebmasterInfo = (): Promise<any> => {
  */
 export const updateWebmasterInfo = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/updateWebmasterInfo',
+    url: '/admin/site/updateWebmasterInfo',
     method: 'POST',
     data
   })
@@ -50,8 +48,8 @@ export const updateWebmasterInfo = (data: any): Promise<any> => {
  */
 export const getWebmasterInfoList = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/getWebmasterInfoList',
-    method: 'POST',
+    url: '/admin/site/getWebmasterInfoList',
+    method: 'POST'
   })
 }
 
@@ -61,9 +59,8 @@ export const getWebmasterInfoList = (): Promise<any> => {
  */
 export const createWebmasterInfo = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/createWebmasterInfo',
+    url: '/admin/site/createWebmasterInfo',
     method: 'POST',
     data
   })
 }
-

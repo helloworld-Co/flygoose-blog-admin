@@ -1,4 +1,4 @@
-import request from "@/utils/http"
+import request from '@/utils/http'
 
 /**
  * @description 获取网站信息
@@ -6,8 +6,8 @@ import request from "@/utils/http"
  */
 export const getUsedBlogInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/getUsedBlogInfo',
-    method: 'POST',
+    url: '/admin/site/getUsedBlogInfo',
+    method: 'POST'
   })
 }
 
@@ -17,7 +17,7 @@ export const getUsedBlogInfo = (): Promise<any> => {
  */
 export const updateBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/blog/updateBlog',
+    url: '/admin/blog/updateBlog',
     method: 'POST',
     data
   })
@@ -29,7 +29,7 @@ export const updateBlog = (data: any): Promise<any> => {
  */
 export const searchBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/blog/searchBlog',
+    url: '/admin/blog/searchBlog',
     method: 'POST',
     data
   })
@@ -41,7 +41,7 @@ export const searchBlog = (data: any): Promise<any> => {
  */
 export const publishBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/blog/publishBlog',
+    url: '/admin/blog/publishBlog',
     method: 'POST',
     data
   })
@@ -57,7 +57,6 @@ export const getBlogDetail = (data: any): Promise<any> => {
     data
   })
 }
-
 
 /**
  * @description 获取博客详情

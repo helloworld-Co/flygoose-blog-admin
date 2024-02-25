@@ -1,8 +1,8 @@
 import axios, { type AxiosRequestConfig, AxiosError } from 'axios'
 // import { message } from 'ant-design-vue'
 import type { CustomResponseType } from '@/types/axios'
-import router from '@/router';
-import { message } from 'ant-design-vue';
+import router from '@/router'
+import { message } from 'ant-design-vue'
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
@@ -15,8 +15,9 @@ const service = axios.create({
 service.interceptors.request.use(
   (config) => {
     // 可以处理token等
-    config.headers['Content-Type'] = config.headers['Content-Type'] || 'application/x-www-form-urlencoded'
-    if (config.url !== '/v8/access/login') {
+    config.headers['Content-Type'] =
+      config.headers['Content-Type'] || 'application/x-www-form-urlencoded'
+    if (config.url !== '/admin/access/login') {
       config.headers.token = localStorage.getItem('token')
     }
     return config
@@ -69,9 +70,7 @@ service.interceptors.response.use(
 )
 
 // 封装一层以更好的统一定义接口返回的类型
-const request = <T>(
-  config: AxiosRequestConfig
-): Promise<CustomResponseType<T>> => {
+const request = <T>(config: AxiosRequestConfig): Promise<CustomResponseType<T>> => {
   return new Promise((resolve, reject) => {
     service
       .request<CustomResponseType<T>>(config)

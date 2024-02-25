@@ -1,4 +1,4 @@
-import request from "@/utils/http"
+import request from '@/utils/http'
 
 /**
  * @description 获取网站信息
@@ -6,8 +6,8 @@ import request from "@/utils/http"
  */
 export const getUsedSiteInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/getUsedSiteInfo',
-    method: 'POST',
+    url: '/admin/site/getUsedSiteInfo',
+    method: 'POST'
   })
 }
 
@@ -17,7 +17,7 @@ export const getUsedSiteInfo = (): Promise<any> => {
  */
 export const updateSite = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/updateSite',
+    url: '/admin/site/updateSite',
     method: 'POST',
     data
   })
@@ -29,8 +29,8 @@ export const updateSite = (data: any): Promise<any> => {
  */
 export const getSiteInfoList = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/getSiteInfoList',
-    method: 'POST',
+    url: '/admin/site/getSiteInfoList',
+    method: 'POST'
   })
 }
 
@@ -40,7 +40,7 @@ export const getSiteInfoList = (): Promise<any> => {
  */
 export const createSite = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/site/createSite',
+    url: '/admin/site/createSite',
     method: 'POST',
     data
   })

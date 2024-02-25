@@ -1,11 +1,11 @@
-import request from "@/utils/http"
+import request from '@/utils/http'
 
 /**
- * @description 获取分类列表 
+ * @description 获取分类列表
  */
 export const getCategoryList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/category/getCategoryList',
+    url: '/admin/category/getCategoryList',
     method: 'POST',
     data
   })
@@ -16,20 +16,18 @@ export const getCategoryList = (data: any): Promise<any> => {
  */
 export const updateCategory = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/category/update',
+    url: '/admin/category/update',
     method: 'POST',
     data
   })
 }
-
-
 
 /**
  * @description 创建分类
  */
 export const createCategory = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/category/create',
+    url: '/admin/category/create',
     method: 'POST',
     data
   })
