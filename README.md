@@ -45,13 +45,40 @@ npm install --g yarn
 ##### 依赖安装
 
 ```sh
-npm install / yarn install  //在此建议使用yarn进行安装
+pnpm install / pnpm install / yarn install
+```
+
+在此建议使用 pnpm 进行安装，如果没有安装 pnpm，可以再 package.json 文件中将如下代码注释
+
+```sh
+"preinstall": "npx only-allow pnpm"
 ```
 
 ##### 项目启动
 
 ```sh
-npm run dev / yarn run dev  //在此建议使用yarn进行启动
+npm run dev / yarn run dev
+```
+
+##### 项目接口请求地址修改
+
+需要启动自己本地服务端项目，在 vite.config.ts 文件中更改以下内容
+
+```sh
+server: {
+    proxy: {
+      '/api': {
+        target: 'http://192.168.168.10:29091',  // 更改此ip地址为自己本地服务器ip即可
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/static': {
+        target: 'http://192.168.168.10:29091',  // 更改此ip地址为自己本地服务器ip即可
+        changeOrigin: true,
+      }
+    },
+    hmr: true
+  },
 ```
 
 ##### 项目打包
