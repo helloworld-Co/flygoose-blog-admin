@@ -1,11 +1,11 @@
-import request from "@/utils/http"
+import request from '@/utils/http'
 
 /**
- * @description 搜索专栏 
+ * @description 搜索专栏
  */
 export const searchSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/searchSpecial',
+    url: '/api/special/searchSpecial',
     method: 'POST',
     data
   })
@@ -16,20 +16,18 @@ export const searchSpecial = (data: any): Promise<any> => {
  */
 export const updateSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/update',
+    url: '/api/special/update',
     method: 'POST',
     data
   })
 }
-
-
 
 /**
  * @description 创建专栏
  */
 export const createSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/create',
+    url: '/api/special/create',
     method: 'POST',
     data
   })
@@ -40,43 +38,40 @@ export const createSpecial = (data: any): Promise<any> => {
  */
 export const addSection = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/addSection',
+    url: '/api/special/addSection',
     method: 'POST',
     data
   })
 }
-
 
 /**
  * @description 更新小节
  */
 export const updateSection = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/updateSection',
+    url: '/api/special/updateSection',
     method: 'POST',
     data
   })
 }
-
 
 /**
  * @description 获取专栏小节列表
  */
 export const getSectionList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/special/getSectionList',
+    url: '/api/special/getSectionList',
     method: 'POST',
     data
   })
 }
-
 
 /**
  * @description 获取小节详情
  */
 export const getSectionDetail = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: 'v8/special/getSectionDetail',
+    url: 'api/special/getSectionDetail',
     method: 'POST',
     data
   })

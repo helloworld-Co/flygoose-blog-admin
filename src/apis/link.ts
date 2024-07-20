@@ -1,25 +1,22 @@
-import request from "@/utils/http"
-
+import request from '@/utils/http'
 
 /**
  * @description 更新友链
  */
 export const updateLink = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/link/update',
+    url: '/api/link/update',
     method: 'POST',
     data
   })
 }
-
-
 
 /**
  * @description 创建友链
  */
 export const createLink = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/link/create',
+    url: '/api/link/create',
     method: 'POST',
     data
   })
@@ -30,10 +27,8 @@ export const createLink = (data: any): Promise<any> => {
  */
 export const getLinkList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/link/getLinkList',
+    url: '/api/link/getLinkList',
     method: 'POST',
     data
   })
 }
-
-

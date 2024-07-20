@@ -1,5 +1,4 @@
-import request from "@/utils/http"
-
+import request from '@/utils/http'
 
 /**
  * @description 创建轮播图
@@ -7,26 +6,22 @@ import request from "@/utils/http"
  */
 export const bannerCreate = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/banner/create',
+    url: '/admin/banner/create',
     method: 'POST',
     data
   })
 }
-
-
-
 
 /**
  * @description 更新轮播图
  */
 export const bannerUpdate = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/banner/update',
+    url: '/admin/banner/update',
     method: 'POST',
     data
   })
 }
-
 
 /**
  * @description 获取轮播图列表
@@ -34,7 +29,7 @@ export const bannerUpdate = (data: any): Promise<any> => {
 
 export const bannerGetBannerList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/v8/banner/getBannerList',
+    url: '/admin/banner/getBannerList',
     method: 'POST',
     data
   })

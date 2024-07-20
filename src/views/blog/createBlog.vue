@@ -76,7 +76,7 @@ const route = useRoute()
 const cateList = ref([])
 const actionUrl =
   import.meta.env.VITE_API_BASE_URL +
-  `${import.meta.env.MODE == 'development' ? '/' : ''}v8/file/uploadImg`
+  `${import.meta.env.MODE == 'development' ? '/' : ''}api/file/uploadImg`
 const formState = ref({
   title: '',
   intro: '',
