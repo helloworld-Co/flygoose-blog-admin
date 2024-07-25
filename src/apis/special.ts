@@ -71,7 +71,7 @@ export const getSectionList = (data: any): Promise<any> => {
  */
 export const getSectionDetail = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: 'v8/special/getSectionDetail',
+    url: '/admin/special/getSectionDetail',
     method: 'POST',
     data
   })

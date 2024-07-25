@@ -5,7 +5,7 @@ import request from '@/utils/http'
  */
 export const getDashboardInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: 'v8/workStation/getStatistics',
+    url: '/admin/workStation/getStatistics',
     method: 'POST'
   })
 }

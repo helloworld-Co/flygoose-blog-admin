@@ -52,7 +52,8 @@ export const publishBlog = (data: any): Promise<any> => {
  */
 export const getBlogDetail = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: 'v8/blog/getBlogDetail',
+    // url: 'v8/blog/getBlogDetail',
+    url: '/admin/blog/getBlogDetail',
     method: 'POST',
     data
   })
@@ -63,7 +64,8 @@ export const getBlogDetail = (data: any): Promise<any> => {
  */
 export const updateBlogStatus = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: 'v8/blog/updateBlogStatus',
+    // url: 'v8/blog/updateBlogStatus',
+    url: '/admin/blog/updateBlogStatus',
     method: 'POST',
     data
   })

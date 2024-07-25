@@ -19,6 +19,7 @@ service.interceptors.request.use(
       config.headers['Content-Type'] || 'application/x-www-form-urlencoded'
     if (config.url !== '/admin/access/login') {
       config.headers.token = localStorage.getItem('token')
+      config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
     }
     return config
   },
