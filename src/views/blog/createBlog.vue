@@ -74,9 +74,7 @@ import type { UploadChangeParam } from 'ant-design-vue'
 const router = useRouter()
 const route = useRoute()
 const cateList = ref([])
-const actionUrl =
-  import.meta.env.VITE_API_BASE_URL +
-  `${import.meta.env.MODE == 'development' ? '/' : ''}v8/file/uploadImg`
+const actionUrl = import.meta.env.VITE_API_BASE_URL + 'admin/file/uploadImg'
 const formState = ref({
   title: '',
   intro: '',
@@ -100,7 +98,8 @@ onMounted(() => {
 })
 
 const handleChange = ({ file }: UploadChangeParam) => {
-  formState.value.thumbnail = file.response?.data?.filename
+  formState.value.thumbnail =
+    import.meta.env.VITE_API_BASE_UPLOAD_IMG_URL + file.response?.data?.filename
 }
 
 const submit = async () => {
