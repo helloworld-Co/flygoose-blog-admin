@@ -62,29 +62,22 @@ npm run dev / yarn run dev
 
 ##### 项目接口请求地址修改
 
-需要启动自己本地服务端项目，在 vite.config.ts 文件中更改以下内容
+在根目录找到 `.env.development` 文件
+
+##### (注：在此项目中，`.env.development`、`.env.production` 文件是用来区分不同环境，具体可根据项目需求进行修改)
 
 ```sh
-server: {
-    proxy: {
-      '/api': {
-        target: 'http://192.168.168.10:29091',  // 更改此ip地址为自己本地服务器ip即可
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-      '/static': {
-        target: 'http://192.168.168.10:29091',  // 更改此ip地址为自己本地服务器ip即可
-        changeOrigin: true,
-      }
-    },
-    hmr: true
-  },
+// 接口请求地址
+VITE_API_BASE_URL = "https://test-blog.helloworld.net/api/"
+// 图片地址
+VITE_API_BASE_UPLOAD_IMG_URL = "https://test-blog.helloworld.net"
 ```
 
-##### 项目打包
+##### 项目打包（具体可查看 package.json 文件中的 scripts 配置,根据项目需求进行修改）
 
 ```sh
-npm run build
+npm run build:prod  // 打包生产环境
+npm run build:dev  // 打包开发环境
 ```
 
 ## Project Setup
