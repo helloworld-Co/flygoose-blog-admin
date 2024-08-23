@@ -21,6 +21,16 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## 飞鹅周边 (可访问一下地址访问体验)
+
+##### 飞鹅官网 - flygoose.helloworld.net
+
+##### 飞鹅博客 - flygoose-blog.helloworld.net
+
+##### 飞鹅管理系统 - flygoose-admin.helloworld.net
+
+##### helloworld 开发者社区 - www.helloworld.net
+
 ## 部署相关
 
 #### 环境安装
