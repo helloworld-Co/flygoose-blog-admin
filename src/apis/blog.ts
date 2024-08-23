@@ -6,7 +6,7 @@ import request from '@/utils/http'
  */
 export const getUsedBlogInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/site/getUsedBlogInfo',
+    url: '/admin/site/getUsedBlogInfo',
     method: 'POST'
   })
 }
@@ -17,7 +17,7 @@ export const getUsedBlogInfo = (): Promise<any> => {
  */
 export const updateBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/blog/updateBlog',
+    url: '/admin/blog/updateBlog',
     method: 'POST',
     data
   })
@@ -29,7 +29,7 @@ export const updateBlog = (data: any): Promise<any> => {
  */
 export const searchBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/blog/searchBlog',
+    url: '/admin/blog/searchBlog',
     method: 'POST',
     data
   })
@@ -41,7 +41,7 @@ export const searchBlog = (data: any): Promise<any> => {
  */
 export const publishBlog = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/blog/publishBlog',
+    url: '/admin/blog/publishBlog',
     method: 'POST',
     data
   })
@@ -52,7 +52,8 @@ export const publishBlog = (data: any): Promise<any> => {
  */
 export const getBlogDetail = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/blog/getBlogDetail',
+    // url: 'v8/blog/getBlogDetail',
+    url: '/admin/blog/getBlogDetail',
     method: 'POST',
     data
   })
@@ -63,7 +64,8 @@ export const getBlogDetail = (data: any): Promise<any> => {
  */
 export const updateBlogStatus = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/blog/updateBlogStatus',
+    // url: 'v8/blog/updateBlogStatus',
+    url: '/admin/blog/updateBlogStatus',
     method: 'POST',
     data
   })

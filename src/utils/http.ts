@@ -17,11 +17,10 @@ service.interceptors.request.use(
     // 可以处理token等
     config.headers['Content-Type'] =
       config.headers['Content-Type'] || 'application/x-www-form-urlencoded'
-    if (config.url !== '/api/admin/access/login') {
+    if (config.url !== '/admin/access/login') {
       config.headers.token = localStorage.getItem('token')
+      config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
     }
-
-    console.log('config.url=' + config.url)
     return config
   },
   (err) => {

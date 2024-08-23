@@ -6,7 +6,7 @@ import request from '@/utils/http'
  */
 export const login = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/admin/access/login',
+    url: '/admin/access/login',
     method: 'POST',
     data
   })

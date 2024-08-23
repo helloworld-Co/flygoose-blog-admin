@@ -21,6 +21,16 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## 飞鹅周边 (可访问一下地址访问体验)
+
+##### 飞鹅官网 - flygoose.helloworld.net
+
+##### 飞鹅博客 - flygoose-blog.helloworld.net
+
+##### 飞鹅管理系统 - flygoose-admin.helloworld.net
+
+##### helloworld 开发者社区 - www.helloworld.net
+
 ## 部署相关
 
 #### 环境安装
@@ -45,19 +55,39 @@ npm install --g yarn
 ##### 依赖安装
 
 ```sh
-npm install / yarn install  //在此建议使用yarn进行安装
+pnpm install / pnpm install / yarn install
+```
+
+在此建议使用 pnpm 进行安装，如果没有安装 pnpm，可以再 package.json 文件中将如下代码注释
+
+```sh
+"preinstall": "npx only-allow pnpm"
 ```
 
 ##### 项目启动
 
 ```sh
-npm run dev / yarn run dev  //在此建议使用yarn进行启动
+npm run dev / yarn run dev
 ```
 
-##### 项目打包
+##### 项目接口请求地址修改
+
+在根目录找到 `.env.development` 文件
+
+##### (注：在此项目中，`.env.development`、`.env.production` 文件是用来区分不同环境，具体可根据项目需求进行修改)
 
 ```sh
-npm run build
+// 接口请求地址
+VITE_API_BASE_URL = "https://test-blog.helloworld.net/api/"
+// 图片地址
+VITE_API_BASE_UPLOAD_IMG_URL = "https://test-blog.helloworld.net"
+```
+
+##### 项目打包（具体可查看 package.json 文件中的 scripts 配置,根据项目需求进行修改）
+
+```sh
+npm run build:prod  // 打包生产环境
+npm run build:dev  // 打包开发环境
 ```
 
 ## Project Setup

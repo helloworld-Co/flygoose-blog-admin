@@ -5,7 +5,7 @@ import request from '@/utils/http'
  */
 export const getCategoryList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/category/getCategoryList',
+    url: '/admin/category/getCategoryList',
     method: 'POST',
     data
   })
@@ -16,7 +16,7 @@ export const getCategoryList = (data: any): Promise<any> => {
  */
 export const updateCategory = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/category/update',
+    url: '/admin/category/update',
     method: 'POST',
     data
   })
@@ -27,7 +27,7 @@ export const updateCategory = (data: any): Promise<any> => {
  */
 export const createCategory = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/category/create',
+    url: '/admin/category/create',
     method: 'POST',
     data
   })

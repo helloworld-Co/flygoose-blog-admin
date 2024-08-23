@@ -5,7 +5,7 @@ import request from '@/utils/http'
  */
 export const noticeCreate = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/notice/create',
+    url: '/admin/notice/create',
     method: 'POST',
     data
   })
@@ -16,7 +16,7 @@ export const noticeCreate = (data: any): Promise<any> => {
  */
 export const noticeUpdate = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/notice/update',
+    url: '/admin/notice/update',
     method: 'POST',
     data
   })
@@ -28,7 +28,7 @@ export const noticeUpdate = (data: any): Promise<any> => {
 
 export const getNoticeList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/notice/getNoticeList',
+    url: '/admin/notice/getNoticeList',
     method: 'POST',
     data
   })

@@ -5,7 +5,7 @@ import request from '@/utils/http'
  */
 export const searchSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/searchSpecial',
+    url: '/admin/special/searchSpecial',
     method: 'POST',
     data
   })
@@ -16,7 +16,7 @@ export const searchSpecial = (data: any): Promise<any> => {
  */
 export const updateSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/update',
+    url: '/admin/special/update',
     method: 'POST',
     data
   })
@@ -27,7 +27,7 @@ export const updateSpecial = (data: any): Promise<any> => {
  */
 export const createSpecial = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/create',
+    url: '/admin/special/create',
     method: 'POST',
     data
   })
@@ -38,7 +38,7 @@ export const createSpecial = (data: any): Promise<any> => {
  */
 export const addSection = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/addSection',
+    url: '/admin/special/addSection',
     method: 'POST',
     data
   })
@@ -49,7 +49,7 @@ export const addSection = (data: any): Promise<any> => {
  */
 export const updateSection = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/updateSection',
+    url: '/admin/special/updateSection',
     method: 'POST',
     data
   })
@@ -60,7 +60,7 @@ export const updateSection = (data: any): Promise<any> => {
  */
 export const getSectionList = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/api/special/getSectionList',
+    url: '/admin/special/getSectionList',
     method: 'POST',
     data
   })
@@ -71,7 +71,7 @@ export const getSectionList = (data: any): Promise<any> => {
  */
 export const getSectionDetail = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: 'api/special/getSectionDetail',
+    url: '/admin/special/getSectionDetail',
     method: 'POST',
     data
   })

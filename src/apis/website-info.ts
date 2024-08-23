@@ -6,7 +6,7 @@ import request from '@/utils/http'
  */
 export const getUsedSiteInfo = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/site/getUsedSiteInfo',
+    url: '/admin/site/getUsedSiteInfo',
     method: 'POST'
   })
 }
@@ -17,7 +17,7 @@ export const getUsedSiteInfo = (): Promise<any> => {
  */
 export const updateSite = (data: any): Promise<any> => {
   return request<{ token: string }>({
-    url: '/site/updateSite',
+    url: '/admin/site/updateSite',
     method: 'POST',
     data
   })
@@ -29,7 +29,7 @@ export const updateSite = (data: any): Promise<any> => {
  */
 export const getSiteInfoList = (): Promise<any> => {
   return request<{ token: string }>({
-    url: '/site/getSiteInfoList',
+    url: '/admin/site/getSiteInfoList',
     method: 'POST'
   })
 }
