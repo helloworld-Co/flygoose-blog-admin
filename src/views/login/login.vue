@@ -64,7 +64,7 @@ export default defineComponent({
   },
   setup() {
     const formState = reactive<FormState>({
-      username: '18050506630',
+      username: '18612345678',
       password: '123456',
       remember: true
     })
